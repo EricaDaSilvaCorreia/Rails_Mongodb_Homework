@@ -25,7 +25,7 @@ Vagrant.configure("2") do |config|
 
   config.vm.define "app" do |app|
     app.vm.box = "ubuntu/xenial64"
-    app.vm.network "private_network", ip: "192.168.20.200"
+    app.vm.network "private_network", ip: "192.168.10.150"
     app.vm.synced_folder ".", "/home/vagrant/app"
     app.vm.provision "shell", inline: set_env({ DB_HOST: "mongodb://192.168.10.100:27017/posts" }), privileged: false
     app.vm.provision "shell", path: "environment/app/provision.sh", privileged: false

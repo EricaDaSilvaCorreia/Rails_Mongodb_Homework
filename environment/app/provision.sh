@@ -25,11 +25,11 @@ curl -sL https://deb.nodesource.com/setup_6.x | sudo -E bash -
 sudo apt-get install -y nodejs
 
 # Install pm2 node package manager
-sudo npm install -g pm2
-cd /home/vagrant/app/environment/app/app
-pm2 start app.js
+# sudo npm install -g pm2
+# cd /home/vagrant/app/environment/app/app
+# pm2 start app.js
 
 # Conf default of nginx
-# sudo mv /etc/nginx/sites-available/default /etc/nginx/sites-available/default.bak
-# sudo ln -s /home/vagrant/app/environment/app/default /etc/nginx/sites-available/default
-# sudo service nginx restart
+sudo mv /etc/nginx/sites-available/default /etc/nginx/sites-available/default.bak
+sudo ln -s /home/vagrant/app/environment/app/default /etc/nginx/sites-available/default
+sudo service nginx restart
